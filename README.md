@@ -15,7 +15,7 @@ Additionally, there is a tool in this add-in to strip backgrounds from rasters a
 
 The airplane is assumed to still be intact and somewhere in the mountains of Fort Apache Reservation, Arizona. The [owner has asked for public help](http://tbmavenger.blogspot.com/2018/06/tbm-avenger-lost-in-white-mountains-of.html) in locating the plane. Multi-spectral imaging using modern satellites may be able to assist with this search as the potential crash area upwards of 30,000 acres is much too great to manually search at low cost. 
 
-The `sample_data` folder contains day and night Landsat 8 Band 11 (TIRS 2) [thermal] data in Apache County, AZ clipped to the probable crash site of N337VT.
+The `sample_data` folder contains May 2018 day and night Landsat 8 Band 11 (TIRS 2) [thermal] data in Apache County, AZ clipped to the probable crash site of N337VT. If the plane wreckage was significantly exposed to Landsat 8 and Landsat 8 thermal resolution (currently 100m x 100m) was sufficiently high, we may see the plane highlighted due to heating and cooling differences. 
 
 ### Installation
 
