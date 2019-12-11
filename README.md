@@ -6,7 +6,7 @@ This add-in for ArcGIS allows a user to quickly preview significant changes betw
 
 Additionally, there is a tool in this add-in to strip backgrounds from rasters and replace the 0 value backgrounds with NODATA values to assist with accurate calculations.
 
-![raster-highlighter-demo-screenshot](demo_screenshot.JPG)
+![raster-highlighter-demo-screenshot](https://gitlab.com/ansonl/significant-change-preview/raw/master/demo_screenshot.PNG)
 
 ### Background
 
@@ -31,7 +31,7 @@ The airplane is assumed to still be intact and somewhere in the mountains of For
 
 ### Usage
 
-![raster-highlighter-add-in-screenshot](add-in_screenshot.JPG)
+![raster-highlighter-add-in-screenshot](https://gitlab.com/ansonl/significant-change-preview/raw/master/add-in_screenshot.JPG)
 
 The only required data are two overlapping raster images for the same geographic area. 
 
