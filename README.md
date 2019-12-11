@@ -1,8 +1,12 @@
-## Project Proposal
+## Significant Relative Difference Highlighter
 
-### An ArcGIS Python tool for previewing significant changes between two raster datasets
+### An ESRI ArcMap Add-In for highlighting significant changes between two raster datasets
 
-This Python tool for ArcGIS allows a user to quickly preview significant changes between two raster datasets. 
+This add-in for ArcGIS allows a user to quickly preview significant changes between two raster datasets based on relative difference in contrast (r.d.c.). NDVI, OSAVI, and MSAVI2 index methods are selectable as processing options before calculating r.d.c. Cells with significant changes are classified in an output raster based on how many standard deviations away from mean r.d.c. each cell's r.d.c. is between the two overlapping input rasters. A single raster may also be highlighted based on its band 1 values' standard deviation distance away from band 1 mean with a special index option. 
+
+Additionally, there is a tool in this add-in to strip backgrounds from rasters and replace the 0 value backgrounds with NODATA values to assist with accurate calculations.
+
+![raster-highlighter-demo-screenshot](demo_screenshot.JPG)
 
 ### Background
 
@@ -11,33 +15,32 @@ This Python tool for ArcGIS allows a user to quickly preview significant changes
 
 The airplane is assumed to still be intact and somewhere in the mountains of Fort Apache Reservation, Arizona. The [owner has asked for public help](http://tbmavenger.blogspot.com/2018/06/tbm-avenger-lost-in-white-mountains-of.html) in locating the plane. Multi-spectral imaging using modern satellites may be able to assist with this search as the potential crash area upwards of 30,000 acres is much too great to manually search at low cost. 
 
-Using multi-spectral imagery taken before and after the crash, the plane may be found by comparing multiple small square areas of each raster. 
+### Installation
 
-Significant changes will be measured by the difference in standard deviation between user defined square size nxn of both rasters. The user will then specify the standard deviation difference cutoff and all squares with a greater standard deviation will be displayed in a custom Python GUI browser navigable by buttons or keyboard. The GUI will be faster than scrolling in ArcGIS because images will be presented one at a time to the user. This frees the user from needing to keep track of where they are inspecting in the massive search area and focus on analyzing the images with significant changes. 
+1. Clone this repository.
 
-### Data and parameters
+2. Double cick the `change_finder.esriaddin` file inside the `change-finder` folder. 
 
-The only required data are two raster images for the same geographic area. The user will define the size of the square area to calculate standard deviation for as well as the standard deviation difference cutoff to preview areas in the GUI. 
+3. Restart ArcMap.
 
-The output datasets will be raster images of areas with significant change between the two raster images. Rasters containing standard deviation calculations 
+4. Enable the **Relative Difference Highlighter** add-in under Customize > Add-In Manager.
 
+5. Enable the **Change Finder** toolbar under Customize > Toolbars.
 
-### Limitations
+*This add-in requires a Spatial Analyst license due to raster calculations.*
 
-1. Calculating standard deviation for a large area may take a large amount of memory and time. 
+### Usage
 
-2. Editing the raster may require use of an external Python library such as GDAL. 
+![raster-highlighter-add-in-screenshot](add-in_screenshot.JPG)
 
-3. Python GUI may need an external Python library such as tkinter or qt. 
+The only required data are two overlapping raster images for the same geographic area. 
 
-3. Launching the Python GUI as part of the processing workflow may not be supported by ArcPy.
+1. Select two raster layers to compare one at a time and click the appropriate "Select raster" button to save your selection.
 
-## Solution
+2. Select an index method to use and define the size of the rectangle area to apply the index method to. If you only want to highlight significant band 1 values of a single raster and not calculate r.d.c., select "Band 1 (raster 1)" index method. 
 
-1. Smaller raster images will be used for testing and the larger raster datasets may need to be manually broken up before being fed into this tool.
+3. Highlight significant relative difference in contrast (r.d.c.). 
 
-2. The user will need to install a compatible version of GDAL.
+The output dataset will be a raster containing the area cells' relative difference in contrasts and a raster classifying cells in the area based on how many standard deviations away from mean r.d.c. each cell's r.d.c. is. 
 
-3. The user will need to install a compatible GUI library. If Python GUI cannot be created, significant change areas will be marked on the map in ArcGIS so that users can still do analysis. 
-
-4. If Python GUI cannot be launched from ArcPy, it can be bundled as a separate script to be run outside of ArcGIS. 
+To strip backgrounds from rasters with 0 value backgrounds, select the raster and click the remove background tool. The new raster will be saved to the same directory as the original raster with `-noBG` appended to the filename.

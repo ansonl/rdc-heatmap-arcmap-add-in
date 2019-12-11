@@ -1,0 +1,17 @@
+<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Name>Relative Difference Highlighter</Name><AddInID>{62770293-b304-4318-aad2-4abd11b55807}</AddInID><Description>Highlight cells with significant change based on relative difference between two overlapping rasters. </Description><Version>0.1</Version><Image>Images\icons8-search-65.png</Image><Author>ansonl</Author><Company>ansonl</Company><Date>12/11/2019</Date><Targets><Target name="Desktop" version="10.1" /></Targets><AddIn language="PYTHON" library="change_finder_addin.py" namespace="change_finder_addin"><ArcMap>
+    <Commands>
+        <Button caption="Remove Background" category="Relative Difference Highlighter" class="Reclassify0BackgroundAsNODATAButton" id="change_finder_addin.remove_background_button" image="Images\icons8-snap-background-to-white-16.png" message="Replace 0 value background cells of a raster with NODATA value" tip="Remove 0 value background cells"><Help heading="" /></Button>
+        <ComboBox caption="Index Method" category="Relative Difference Highlighter" class="IndexMethodComboBox" id="change_finder_addin.index_method_combobox" itemSizeString="WWWWWW" message="Select an index method apply to rasters before calculating r.d.c." rows="4" sizeString="WWWWWW" tip="Index method to apply"><Help heading="" /></ComboBox>
+        <Button caption="Select Raster 1" category="Relative Difference Highlighter" class="SelectRaster1Button" id="change_finder_addin.select_raster_1_button" image="Images\icons8-timezone-+1-16.png" message="Select Raster 1 for relative difference in contrast calculation" tip="Select Raster 1 for change detection"><Help heading="" /></Button>
+        <Button caption="Select Raster 2" category="Relative Difference Highlighter" class="SelectRaster2Button" id="change_finder_addin.select_raster_2_button" image="Images\icons8-timezone-+2-16.png" message="Select Raster 2 for relative difference in contrast calculation" tip="Select Raster 2 for change detection"><Help heading="" /></Button>
+        <Tool caption="Highlight Significant r.d.c." category="Relative Difference Highlighter" class="SelectAreaTool" id="change_finder_addin.select_area_tool" image="Images\icons8-grid-16.png" message="Select a rectangular area to apply index method to and highlight cells with significant relative difference in contrast based on standard deviations from mean. " tip="Highlight Significant Relative Difference in Contrast (r.d.c.)"><Help heading="" /></Tool>
+        
+        </Commands>
+    <Extensions>
+        </Extensions>
+    <Toolbars>
+        <Toolbar caption="Change Finder" category="Relative Difference Highlighter" id="change_finder_addin.main_toolbar" showInitially="true"><Items><Tool refID="change_finder_addin.select_area_tool" /><Button refID="change_finder_addin.select_raster_1_button" /><Button refID="change_finder_addin.select_raster_2_button" /><ComboBox refID="change_finder_addin.index_method_combobox" /><Button refID="change_finder_addin.remove_background_button" /></Items></Toolbar>
+        </Toolbars>
+    <Menus>
+        </Menus>
+    </ArcMap></AddIn></ESRI.Configuration>
