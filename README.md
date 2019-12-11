@@ -31,7 +31,7 @@ The airplane is assumed to still be intact and somewhere in the mountains of For
 
 ### Usage
 
-![raster-highlighter-add-in-screenshot](https://gitlab.com/ansonl/significant-change-preview/raw/master/add-in_screenshot.JPG)
+![raster-highlighter-add-in-screenshot](https://gitlab.com/ansonl/significant-change-preview/raw/master/add-in_screenshot.PNG)
 
 The only required data are two overlapping raster images for the same geographic area. 
 
