@@ -185,18 +185,18 @@ class SelectAreaTool(object):
 
         # Compute difference of each pixel VI r.d.c to the average in the rdc raster
         vi_rdcRaster = Raster(vi_rdc[0].name)
-        vi_rdcRaster.save('{0}/{1}.tif'.format(raster1.workspacePath, vi_rdc[0].name))
+        vi_rdcRaster.save('{0}/../{1}.tif'.format(raster1.workspacePath, vi_rdc[0].name))
         vi_rdc_diff = arcpy.MakeRasterLayer_management(Abs(vi_rdcRaster - vi_rdcRaster.mean), '{0}_diff'.format(vi_rdc[0].name))
         vi_rdc_diffRaster = Raster(vi_rdc_diff[0].name)
-        vi_rdc_diffRaster.save('{0}/{1}.tif'.format(raster1.workspacePath, vi_rdc_diff[0].name))
+        vi_rdc_diffRaster.save('{0}/../{1}.tif'.format(raster1.workspacePath, vi_rdc_diff[0].name))
 
         absStdDev = abs(vi_rdcRaster.standardDeviation)
         print(absStdDev)
         print(vi_rdc_diffRaster.maximum)
 
         vi_rdc_highlight = Reclassify(vi_rdc_diff[0].name, "Value", RemapRange([[0,absStdDev,"NODATA"],[absStdDev,absStdDev*2,1],[absStdDev*2,absStdDev*3,2],[absStdDev*3,vi_rdc_diffRaster.maximum if vi_rdc_diffRaster.maximum>absStdDev*3 else absStdDev*3+1,3]]))
-        vi_rdc_highlight.save('{0}/{1}-highlight.tif'.format(raster1.workspacePath, vi_rdc_diff[0].name))
-        arcpy.MakeRasterLayer_management('{0}/{1}-highlight.tif'.format(raster1.workspacePath, vi_rdc_diff[0].name), '{0}-highlight'.format(vi_rdc_diff[0].name))
+        vi_rdc_highlight.save('{0}/../{1}-highlight.tif'.format(raster1.workspacePath, vi_rdc_diff[0].name))
+        arcpy.MakeRasterLayer_management('{0}/../{1}-highlight.tif'.format(raster1.workspacePath, vi_rdc_diff[0].name), '{0}-highlight'.format(vi_rdc_diff[0].name))
 
         # Restore the geoprocessing extent.
         arcpy.env.extent = old_extent
