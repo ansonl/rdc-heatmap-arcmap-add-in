@@ -17,7 +17,7 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
-#subdivideSquareSideLength = 5
+subdivideSquareSideLength = 5
 userDefinedExtent = None
 
 raster1 = None
@@ -122,9 +122,20 @@ class SelectAreaTool(object):
         extentHeight = arcpy.env.extent.height
 
         # amountOfImagelets = math.ceil(extentHeight / subdivideSquareSideLength) * math.ceil(extentWidth / subdivideSquareSideLength)
+		amountOfImageletsHeight = math.ceil(extentHeight / subdivideSquareSideLength)
+		amountOfImageletsWidth = math.ceil(extentWidth / subdivideSquareSideLength)
         amountOfImagelets = extentHeight * extentWidth
         if pythonaddins.MessageBox('{0} points will be computed'.format(amountOfImagelets), 'Message', 1) != "OK":
             return
+			
+		if subdivideSquareSideLength > 0:
+			projectedRasters = [None, None]
+			for i in range(len(rasters)):
+				output_feature_class = "raster{0}.shp".format(i)
+				projected_srs = arcpy.SpatialReference('WGS_1984_UTM_Zone_12N')
+				arcpy.Project_management(rasters[i], output_feature_class, projected_srs)
+				arcpy.CreateFishnet_management("fishnet.shp", userDefinedExtent.upperLeft, userDefinedExtent.upperRight, subdivideSquareSideLength, subdivideSquareSideLength, 0, 0, userDefinedExtent.lowerRight, 'NO_LABELS', '#', "POLYGON")
+				arcpy.Intersect_analysis(["fishnet.shp", 
 
         if (index_method_combobox.value != "Band 1 (Raster 1 only)"):
 
