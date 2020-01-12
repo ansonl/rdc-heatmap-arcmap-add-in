@@ -60,7 +60,7 @@ To strip backgrounds from rasters with 0 value backgrounds, select the raster an
 
 ### Notes
 
-![poor man's return](https://raw.githubusercontent.com/ansonl/rdc-heatmap-arcmap-add-in/master/images/add-in_screenshot.PNG)
+![poor man's return](https://raw.githubusercontent.com/ansonl/rdc-heatmap-arcmap-add-in/master/images/drop-in_return_for_arcmap_interpreter.png)
 
 `oneRun.py` is a development file used to test code changes in a single step the ArcMap Python interpreter. Returns are substituted with `1/0` to simulate code from within a function while in the interpreter. 
 
