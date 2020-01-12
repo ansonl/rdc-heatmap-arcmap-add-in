@@ -8,10 +8,10 @@ Additionally, there is a utility tool in this add-in to strip backgrounds from r
 
 ![rdc-heatmap-demo-screenshot](https://raw.githubusercontent.com/ansonl/rdc-heatmap-arcmap-add-in/master/images/demo_screenshot.PNG)
 
-The difference between a whole area and fishnet analysis and heatmap is displayed below. The lake's differences in values are compensated when analyis is divided into imagelets (1000m x 1000m). 
+The difference between a whole area and fishnet analysis and heatmap is displayed below. The lake's differences in values are smoothed out when analyis is divided into imagelets (1000m x 1000m). 
 
-![Whole area analysis](https://raw.githubusercontent.com/ansonl/rdc-heatmap-arcmap-add-in/master/images/no_imagelets_demo.PNG)
-![Imagelet (1000m x 1000m) analysis](https://raw.githubusercontent.com/ansonl/rdc-heatmap-arcmap-add-in/master/images/imagelet_size_1000_demo.PNG)
+<img src="https://raw.githubusercontent.com/ansonl/rdc-heatmap-arcmap-add-in/master/images/no_imagelets_demo.PNG" width="400" alt="Whole area analysis"/>    <img src="https://raw.githubusercontent.com/ansonl/rdc-heatmap-arcmap-add-in/master/images/imagelet_size_1000_demo.PNG" width="400" alt="Imagelet (1000m x 1000m) analysis"/>
+
 
 ### Backstory
 
