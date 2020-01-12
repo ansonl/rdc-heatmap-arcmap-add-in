@@ -16,9 +16,9 @@ The difference between a whole area and fishnet analysis and heatmap is displaye
 ### Backstory
 
 > On May 6, 2018, about 1338 mountain standard time, a Grumman TBM-3E airplane, N337VT, is presumed to have impacted terrain following the bailout of the pilot and passenger due to a partial loss of engine power about 8 miles southwest of Mount Baldy, on the Fort Apache Reservation, Arizona. 
---[NSTB event ANC18LA034](https://www.ntsb.gov/_layouts/ntsb.aviation/brief.aspx?ev_id=20180507X34747)
+--[NSTB event ANC18LA034](https://www.ntsb.gov/_layouts/ntsb.aviation/brief.aspx?ev_id=20180507X34747 =250x250)
 
-The airplane is assumed to still be intact and somewhere in the mountains of Fort Apache Reservation, Arizona. The [owner has asked for public help](http://tbmavenger.blogspot.com/2018/06/tbm-avenger-lost-in-white-mountains-of.html) in locating the plane. Multi-spectral imaging using modern satellites may be able to assist with this search as the potential crash area upwards of 30,000 acres is much too great to manually search at low cost. 
+The airplane is assumed to still be intact and somewhere in the mountains of Fort Apache Reservation, Arizona. The [owner has asked for public help](http://tbmavenger.blogspot.com/2018/06/tbm-avenger-lost-in-white-mountains-of.html =250x250) in locating the plane. Multi-spectral imaging using modern satellites may be able to assist with this search as the potential crash area upwards of 30,000 acres is much too great to manually search at low cost. 
 
 The `sample_data` folder contains May 2018 day and night Landsat 8 Band 11 (TIRS 2) [thermal] data in Apache County, AZ clipped to the probable crash site of N337VT. If the plane wreckage was significantly exposed to Landsat 8 and Landsat 8 thermal resolution (currently 100m x 100m) was sufficiently high, we may see the plane highlighted due to heating and cooling differences. 
 
