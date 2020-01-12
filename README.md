@@ -4,7 +4,7 @@
 
 This add-in for ArcGIS allows a user to quickly create a heatmap of significant changes between two raster datasets based on relative difference in contrast (r.d.c.). NDVI, OSAVI, and MSAVI2 index methods are selectable as processing options (Band 1, NDVI, OSAI, MSAVI2) before calculating r.d.c. Cells with significant changes are classified in an output raster based on how many standard deviations away from mean r.d.c. each cell's r.d.c. is between the two overlapping input rasters. A single raster may also be highlighted based on its band 1 values' standard deviation distance away from band 1 mean to reveal outliers. 
 
-Analysis of areas may be set to an entire area or localized by dividing the greater area into an adjustable fishnet.
+Analysis of areas may be set to an entire area or localized by dividing the greater area into an adjustable fishnet (ex: 3x3 below).
 
 ![rdc-heatmap-imagelet-animated](https://raw.githubusercontent.com/ansonl/rdc-heatmap-arcmap-add-in/master/images/imagelet_animated_demo.gif)
 
