@@ -2,16 +2,20 @@
 
 ### An ESRI ArcMap Add-In for highlighting significant changes between two raster datasets
 
-This add-in for ArcGIS allows a user to quickly create a heatmap of significant changes between two raster datasets based on relative difference in contrast (r.d.c.). NDVI, OSAVI, and MSAVI2 index methods are selectable as processing options (Band 1, NDVI, OSAI, MSAVI2) before calculating r.d.c. Cells with significant changes are classified in an output raster based on how many standard deviations away from mean r.d.c. each cell's r.d.c. is between the two overlapping input rasters. A single raster may also be highlighted based on its band 1 values' standard deviation distance away from band 1 mean to reveal outliers. Analysis of areas may be set to an entire area or localized by dividing the greater area into an adjustable fishnet.
+This add-in for ArcGIS allows a user to quickly create a heatmap of significant changes between two raster datasets based on relative difference in contrast (r.d.c.). NDVI, OSAVI, and MSAVI2 index methods are selectable as processing options (Band 1, NDVI, OSAI, MSAVI2) before calculating r.d.c. Cells with significant changes are classified in an output raster based on how many standard deviations away from mean r.d.c. each cell's r.d.c. is between the two overlapping input rasters. A single raster may also be highlighted based on its band 1 values' standard deviation distance away from band 1 mean to reveal outliers. 
+
+Analysis of areas may be set to an entire area or localized by dividing the greater area into an adjustable fishnet.
+
+![rdc-heatmap-imagelet-animated](https://raw.githubusercontent.com/ansonl/rdc-heatmap-arcmap-add-in/master/images/imagelet_animated_demo.gif)
 
 Additionally, there is a utility tool in this add-in to strip backgrounds from rasters and replace the 0 value backgrounds with NODATA values to assist with accurate calculations and reduce visual clutter.
 
 ![rdc-heatmap-demo-screenshot](https://raw.githubusercontent.com/ansonl/rdc-heatmap-arcmap-add-in/master/images/demo_screenshot.PNG)
 
-The difference between a whole area and fishnet analysis and heatmap is displayed below. The lake's differences in values are compensated when analyis is divided into imagelets (1000m x 1000m). 
+The difference between a whole area and fishnet analysis and heatmap is displayed below. The lake's differences in values are smoothed out when analyis is divided into imagelets (1000m x 1000m). 
 
-![Whole area analysis](https://raw.githubusercontent.com/ansonl/rdc-heatmap-arcmap-add-in/master/images/no_imagelets_demo.PNG)
-![Imagelet (1000m x 1000m) analysis](https://raw.githubusercontent.com/ansonl/rdc-heatmap-arcmap-add-in/master/images/imagelet_size_1000_demo.PNG)
+<img src="https://raw.githubusercontent.com/ansonl/rdc-heatmap-arcmap-add-in/master/images/no_imagelets_demo.PNG" width="400" alt="Whole area analysis"/>    <img src="https://raw.githubusercontent.com/ansonl/rdc-heatmap-arcmap-add-in/master/images/imagelet_size_1000_demo.PNG" width="400" alt="Imagelet (1000m x 1000m) analysis"/>
+
 
 ### Backstory
 
@@ -60,7 +64,7 @@ To strip backgrounds from rasters with 0 value backgrounds, select the raster an
 
 ### Notes
 
-![poor man's return](https://raw.githubusercontent.com/ansonl/rdc-heatmap-arcmap-add-in/master/images/add-in_screenshot.PNG)
+![poor man's return](https://raw.githubusercontent.com/ansonl/rdc-heatmap-arcmap-add-in/master/images/drop-in_return_for_arcmap_interpreter.png)
 
 `oneRun.py` is a development file used to test code changes in a single step the ArcMap Python interpreter. Returns are substituted with `1/0` to simulate code from within a function while in the interpreter. 
 
