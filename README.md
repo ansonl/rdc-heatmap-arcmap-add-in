@@ -20,7 +20,7 @@ The difference between a whole area and fishnet analysis and heatmap is displaye
 ### Backstory
 
 > On May 6, 2018, about 1338 mountain standard time, a Grumman TBM-3E airplane, N337VT, is presumed to have impacted terrain following the bailout of the pilot and passenger due to a partial loss of engine power about 8 miles southwest of Mount Baldy, on the Fort Apache Reservation, Arizona. 
---[NSTB event ANC18LA034](https://www.ntsb.gov/_layouts/ntsb.aviation/brief.aspx?ev_id=20180507X34747 =250x250)
+--[NSTB event ANC18LA034](https://www.ntsb.gov/_layouts/ntsb.aviation/brief.aspx?ev_id=20180507X34747)
 
 The airplane is assumed to still be intact and somewhere in the mountains of Fort Apache Reservation, Arizona. The [owner has asked for public help](http://tbmavenger.blogspot.com/2018/06/tbm-avenger-lost-in-white-mountains-of.html) in locating the plane. Multi-spectral imaging using modern satellites may be able to assist with this search as the potential crash area upwards of 30,000 acres is much too great to manually search at low cost. 
 
